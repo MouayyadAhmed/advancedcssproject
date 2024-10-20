@@ -1,0 +1,85 @@
+.bio {
+    column-gap: 7.4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bio__heading {
+    font-size: var(--font-size-40);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-raleway);
+  }
+  .bio__objectiv {
+    font-family: var(--font-family-poppins);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-20);
+    margin: 3rem 0 8rem;
+  }
+  .bio__name {
+    font-weight: var(--font-weight-semi-bold);
+  }
+  .bio__almdrasa {
+    color: var(--color-green);
+  }
+  .bio__facebook {
+    color: var(--color-blue);
+  }
+  .bio__twitter {
+    color: var(--color-light-blue);
+  }
+  .bio__linkedin {
+    color: var(--color-dark-blue);
+  }
+  .bio__youtube {
+    color: var(--color-red);
+  }
+  .bio__link {
+    font-size: 2.4rem;
+    font-weight: var(--font-weight-semi-bold);
+    text-decoration: none;
+  }
+  .bio__link-say-hi-link {
+    background-color: var(--color-link-bg);
+    color: var(--color-white);
+    padding: 0.7rem 4.7rem;
+    margin-top: 5rem;
+  }
+  .cv-link {
+    padding: 0.7rem 0;
+    margin-inline-start: 1.4rem;
+  }
+  @keyframes jump {
+    0% {
+      transform: translateY(0.5rem);
+    }
+    35% {
+      transform: translateY(-0.5rem);
+    }
+    70% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .bio__arro {
+    display: inline-block;
+    animation: jump 1s alternate infinite ease-in-out;
+  }
+  .bio__pic-content {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-self: end;
+  }
+  .bio__pic-content::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-box-img);
+    width: 100%;
+    height: 30rem;
+    z-index: -1;
+    border-radius: 1.8rem;
+    box-shadow: rgba(0, 0, 0, 0.15);
+  }
+  .bio__pic {
+    width: 30rem;
+  }

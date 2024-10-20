@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body,
+  [type="submit"] {
+    font-size: 1.6rem;
+    border: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+  .container {
+    display: grid;
+    row-gap: 11rem;
+    margin: 0 auto;
+    max-width: calc(var(--container-width) + calc(var(--gutter) * 2));
+    padding-inline: var(--gutter);
+  }
+  .video-loop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.05;
+    z-index: -1;
+  }
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-background);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+  }
+  .header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    border-bottom: 0.07rem solid var(--color-input-border);
+    z-index: -1;
+    background-color: var(--color-background);
+    top: 0;
+  }
+  section {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: start;
+  }
+  .section--with--bg {
+    padding: 3rem;
+  }
+  .section--with--bg::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background-color: var(--color-grey);
+    justify-self: center;
+    z-index: -1;
+  }
+  .navigation{
+    transition: var(--transition-timing);
+  }
+  .navigation__list {
+    display: flex;
+    gap: 2rem;
+  }
+  .navigation__link,
+  .navigation__link:visited {
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+  }
+  .navigation__link:hover,
+  .navigation__link:active {
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text);
+  }
+  .container:has(.bio:target) .navigation__bio,
+  .container:has(.skills:target) .navigation__skills,
+  .container:has(.media:target) .navigation__media,
+  .container:has(.project:target) .navigation__project,
+  .container:has(.clients:target) .navigation__clients,
+  .container:has(.contact:target) .navigation__contact {
+    color: var(--color-blue);
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
